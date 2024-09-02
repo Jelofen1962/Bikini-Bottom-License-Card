@@ -126,7 +126,7 @@ body{
 .profile{
     float: left;
     width: 7.2rem;
-    margin-top: 4rem;
+    margin-top: 1.25rem;
     border-radius: 10px;
     margin-left: -1.3rem;
     filter: saturate(0.7)
