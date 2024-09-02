@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <div class="card" id="cardr">
+    <div class="card" id="card">
         <div class="header">
             <h1 class="title">BIKINI BOTTOM</h1>
             <h2 class="subtitle">FRIENDS LICENSE</h2>
@@ -64,7 +64,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
                 // Use html2canvas to capture the specific element
-                html2canvas(document.getElementById('cartdr')).then(canvas => {
+                html2canvas(document.getElementById('card')).then(canvas => {
                     // Create an anchor element to trigger the download
                     let link = document.createElement('a');
                     link.href = canvas.toDataURL('image/png');
