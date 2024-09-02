@@ -1,0 +1,133 @@
+@font-face {
+    font-family: mol;
+    src: url('../assets/fonts/mol.ttf');
+}
+
+@font-face {
+    font-family: bal;
+    src: url('../assets/fonts/bal.otf');
+}
+
+
+body{
+
+    background-image: url('../assets/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    padding: 2rem;
+    border-radius: 15px;
+    padding-bottom: 4rem;
+    height: 17rem;
+    width: 35rem;
+    box-shadow: 0.2rem 0.2rem 2px #000;
+    
+    background-image: url("../assets/bgcard.jpg");
+    background-repeat: no-repeat;
+    background-size: 180%;
+    
+
+
+
+
+}
+
+.title{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: -0.7rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    background-color: rgb(243, 223, 46);
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: -1.55rem;
+}
+
+.frined-class{
+    text-align: end;
+    font-size: 1.1rem;
+    margin-top: -2.62rem;
+    margin-right: -1.2rem;
+}
+
+.usercountry{
+    text-align: end;
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+    margin-right: -2rem;
+    margin-left: -2rem;
+    padding-right: 1rem;
+
+}
+
+.usercity{
+    text-align: end;
+    font-size: 1.1rem;
+    margin-top: -0.5rem;
+    margin-right: -1rem;
+}
+
+.username{
+    text-align: end;
+    font-size: 1.1rem;
+    margin-top: -0.5rem;
+    margin-right: -1rem;
+    border-top: 0.25rem;
+    border-bottom: 0rem;
+    border-left: 0;
+    padding-top: 0.4rem;
+    border-right: 0;
+    border-color: rgb(20, 204, 255);
+    border-style: dashed;
+}
+
+.userlastname{
+    text-align: end;
+    font-size: 1.1rem;
+    margin-top: -0.5rem;
+    margin-right: -1rem;
+}
+
+.expire{
+    text-align: start;
+    font-size: 1.1rem;
+    margin-top: -11.5rem;
+    margin-left: -1.3rem;
+    color: rgb(214, 0, 0);
+}
+
+.profile{
+    float: left;
+    width: 10.2rem;
+    margin-top: 0.2rem;
+    border-radius: 10px;
+    margin-left: -1.3rem;
+    filter: saturate(0.7)
+}
+
+.stamp{
+    width: 10.2rem;
+    border-radius: 10px;
+    margin-left: -1rem;
+    transform: translateY(2rem);
+    transform: translateX(-4rem);
+    rotate: -30deg;
+}
+
+.bbs{
+    width: 6rem;
+    border-radius: 10px;
+    transform: translate(10rem, 2rem);
+
+}

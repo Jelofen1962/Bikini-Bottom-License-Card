@@ -1,0 +1,76 @@
+<html id="whole" lang="en">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License</title>
+</head>
+<body>
+
+    <div class="card" id="cardr">
+        <div class="header">
+            <h1 class="title">BIKINI BOTTOM</h1>
+            <h2 class="subtitle">FRIENDS LICENSE</h2>
+        </div>
+        <div class="container">
+            <h3 class="frined-class" id="frined-class">CLASS : BESTIE</h3>
+            <h3 class="username" id="username">NAME : </h3>
+            <h3 class="userlastname" id="userlastname">LAST NAME : </h3>
+            <h3 class="userlastname" id="usergender">GNEDER : </h3>
+            <h3 class="userlastname" id="usercountry">COUNTRY : </h3>
+            <h3 class="usercity" id="usercity">CITY : </h3>
+            <h3 class="usercity" id="userbirth">BIRTHDAY : </h3>
+            <h3 class="expire" id="expire">EXP : NEVER</h3>
+            <img class="profile" src="./assets/profile.png" alt="" id="profile">
+            <img class="stamp" src="./assets/stamp.png" alt="">
+            <img class="bbs" src="./assets/bbs.png" alt="">
+        </div>
+    </div>
+
+
+
+</body>
+
+<script>
+    // Retrieve data from sessionStorage
+    document.addEventListener("DOMContentLoaded", function () {
+        let name = sessionStorage.getItem('name');
+        let lastName = sessionStorage.getItem('lastName');
+        let country = sessionStorage.getItem('country');
+        let city = sessionStorage.getItem('city');
+        let gender = sessionStorage.getItem('gender');
+        let birthday = sessionStorage.getItem('birthday');
+        let profile = sessionStorage.getItem('profile');
+
+        // Display the data
+        document.getElementById('username').textContent += name;
+        document.getElementById('userlastname').textContent += lastName;
+        document.getElementById('usercountry').textContent += country;
+        document.getElementById('usercity').textContent += city;
+        document.getElementById('usergender').textContent += gender;
+        document.getElementById('userbirth').textContent += birthday;
+        
+        if (profile) {
+            document.getElementById('profile').src = profile; // if profile is an image URL
+        }
+
+    });
+</script>
+
+<link rel="stylesheet" href="./static/liecense.css">
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+                // Use html2canvas to capture the specific element
+                html2canvas(document.getElementById('cardr')).then(canvas => {
+                    // Create an anchor element to trigger the download
+                    let link = document.createElement('a');
+                    link.href = canvas.toDataURL('image/png');
+                    link.download = 'Friends License.png'; // File name for the download
+                    link.click(); // Trigger the download
+                }).catch(error => {
+                    console.error('Error capturing screenshot:', error);
+                });
+            });
+</script>

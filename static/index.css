@@ -1,0 +1,82 @@
+@font-face {
+    font-family: mol;
+    src: url('../assets/fonts/mol.ttf');
+}
+
+@font-face {
+    font-family: bal;
+    src: url('../assets/fonts/bal.otf');
+}
+
+
+body{
+
+    background-image: url(https://wallpapercave.com/wp/wp2234726.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.form{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: mol;
+    font-size: 1.8rem;
+
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 5rem;
+
+    box-shadow: 0 0 10px #fff;
+    
+}
+
+.form input{
+    
+    font-family: mol;
+    font-size: 1rem;
+    text-align: start;
+    border: none;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 5px;
+    height: 2rem;
+    margin-bottom: 0.7rem;
+    transform: translateY(-0.2rem);
+}
+
+
+.chooseimg{
+    font-size: 1.3rem;
+}
+
+.button-container{
+    justify-content: center;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SuB{
+    color: white;
+    font-family: mol;
+    font-weight: 100;
+    font-size: 1.5rem;
+    background-color: hsl(207, 100%, 46%);
+    border: none;
+    border-radius: 0.3rem;
+    width: 25.9rem;
+    height: 3rem;
+    box-shadow: 0 0 10px hsl(207, 100%, 35%);
+    transition: 150ms;
+}
+
+.SuB:hover{
+    background-color: hsl(207, 100%, 35%);
+    box-shadow: 0 0 10px hsl(207, 92%, 30%);
+    transition: 250ms;
+}
+
+

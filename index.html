@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelo License Shop</title>
+</head>
+<body>
+
+    <div class="form">
+        <label for="name">Name : </label>
+        <input id="name" type="text" placeholder="Name" id="name"><br>
+        <label for="lastName">Last Name : </label>
+        <input id="lastName" type="text" placeholder="Last Name" id="lastName"><br>
+        <label for="country">Country : </label>
+        <input id="country" type="text" placeholder="Country" id="country"><br>
+        <label for="city">City : </label>
+        <input id="city" type="text" placeholder="City" id="city"><br>
+        <label for="gender">Gender : </label>
+        <input id="gender" type="text" placeholder="M (male) or F (female)" id="gender"><br>
+        <label for="Birthday">Birthdate : </label>
+        <input id="Birthday" type="date" id="eyeColor"><br>
+        <p id="chooseimg">Choose your image (3:4)</p>
+        <input class="forminput" type="file" id="image" accept="image/png, image/jpeg, image/jpg">
+    </div>
+    <div class="button-container">
+        <button onclick="submit()" class="SuB">Submit</button>
+    </div>
+
+
+</body>
+<script>
+    function submit() {
+    // Get values from input fields
+    let name = document.getElementById('name').value.toUpperCase();
+    let lastName = document.getElementById('lastName').value.toUpperCase();
+    let country = document.getElementById('country').value.toUpperCase();
+    let city = document.getElementById('city').value.toUpperCase();
+    let gender = document.getElementById('gender').value.toUpperCase();
+    let birthday = document.getElementById('Birthday').value.toUpperCase();
+    let profile = document.getElementById('image');
+
+    // Store data in sessionStorage
+    sessionStorage.setItem('name', name);
+    sessionStorage.setItem('lastName', lastName);
+    sessionStorage.setItem('country', country);
+    sessionStorage.setItem('city', city);
+    sessionStorage.setItem('gender', gender);
+    sessionStorage.setItem('birthday', birthday);
+    sessionStorage.setItem('profile', profile);
+
+    if(profile.files && profile.files[0]){
+        let reader = new FileReader();
+        reader.onload = function(e){
+            sessionStorage.setItem('profile', e.target.result);
+            window.location.href = "license.html";
+        };
+        reader.readAsDataURL(profile.files[0]);
+    }
+    else{
+        window.location.href = "license.html";
+    }
+    }
+    // Redirect to license.html after 3 seconds
+    
+</script>
+<link rel="stylesheet" href="./static/index.css">
+</html>
