@@ -1,77 +1,99 @@
-<html id="whole" lang="en">
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>License</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e8e3d8">
+  <meta name="description" content="Your Bikini Bottom Friends License.">
+  <title>Your Bikini Bottom Friends License</title>
+  <link rel="stylesheet" href="./static/license.css">
+  <script src="./static/js/license.js" defer></script>
 </head>
-<body>
+<body class="license-page">
+  <div class="page-backdrop" aria-hidden="true"></div>
 
-    <div class="card" id="card">
-        <div class="header">
-            <h1 class="title">BIKINI BOTTOM</h1>
-            <h2 class="subtitle">FRIENDS LICENSE</h2>
-            <h2 class="credit">Made by Jelofen1962</h2>
+  <header class="license-topbar">
+    <a class="brand" href="./index.html" aria-label="Back to license builder">
+      <img src="./assets/bbs.png" alt="Saving Bikini Bottom">
+      <span>FRIENDS LICENSE</span>
+    </a>
+    <a class="edit-link" href="./index.html"><span aria-hidden="true">←</span> Edit details</a>
+  </header>
+
+  <main class="license-main">
+    <section class="license-intro">
+      <p class="eyebrow">RESIDENT IDENTIFICATION · READY</p>
+      <h1>Your new status: <span>official bestie.</span></h1>
+      <p>Your very own Bikini Bottom license. Check the details, then save your card.</p>
+    </section>
+
+    <section class="license-stage" aria-label="Your generated license">
+      <article class="license-card" id="license-card" aria-label="Bikini Bottom driver license">
+        <div class="gold-bands gold-bands-left" aria-hidden="true"><i></i><i></i></div>
+        <div class="gold-bands gold-bands-right" aria-hidden="true"><i></i><i></i></div>
+
+        <header class="card-heading">
+          <h2>BIKINI BOTTOM</h2>
+          <p>DRIVER LICENSE</p>
+        </header>
+        <span class="card-class">CLASS: S</span>
+
+        <div class="card-meta">
+          <span class="card-expiry">EXPIRES: NEVER</span>
+          <span class="card-number-label">LICENSE NO.</span>
+          <strong class="card-number" id="license-code">A1356021</strong>
         </div>
-        <div class="container">
-            <h3 class="frined-class" id="frined-class">CLASS : BESTIE</h3>
-            <h3 class="username" id="username">NAME : </h3>
-            <h3 class="userlastname" id="userlastname">LAST NAME : </h3>
-            <h3 class="userlastname" id="usergender">GNEDER : </h3>
-            <h3 class="userlastname" id="usercountry">COUNTRY : </h3>
-            <h3 class="usercity" id="usercity">CITY : </h3>
-            <h3 class="usercity" id="userbirth">BIRTHDAY : </h3>
-            <h3 class="expire" id="expire">EXP : NEVER</h3>
-            <img class="profile" src="./assets/profile.png" alt="" id="profile">
-            <img class="stamp" src="./assets/stamp.png" alt="">
-            <img class="bbs" src="./assets/bbs.png" alt="">
+        <img class="card-wave" src="./assets/license-wave.svg" alt="" aria-hidden="true">
+
+        <div class="card-photo-frame">
+          <img id="profile-photo" src="./assets/profile.png" alt="License holder portrait">
         </div>
-    </div>
 
+        <section class="card-information" aria-label="License holder information">
+          <h3 id="license-name">—</h3>
+          <p class="card-address" id="license-location">BIKINI BOTTOM</p>
+          <p class="card-country" id="license-country">UNDERSEA</p>
+          <div class="card-demographics" aria-label="Personal details">
+            <div class="demographic-row" aria-label="Appearance">
+              <span id="license-gender">SEX: —</span>
+              <span id="license-hair" hidden></span>
+              <span id="license-eyes" hidden></span>
+            </div>
+            <div class="demographic-row" aria-label="Measurements and birth date">
+              <span id="license-height" hidden></span>
+              <span id="license-weight" hidden></span>
+              <span id="license-birthday" style="color:red;">DOB: —</span>
+            </div>
+          </div>
+          <div class="card-signature">
+            <span id="license-signature">—</span>
+          </div>
+        </section>
 
+        <span class="card-microprint" aria-hidden="true">BIKINI BOTTOM RESIDENT SERVICES · FRIENDS LICENSE</span>
+      </article>
 
+      <div class="license-actions">
+        <a class="secondary-link" href="./index.html">Make another license</a>
+        <button class="download-button" id="download-license" type="button" disabled>
+          <span>Download PNG</span>
+          <span class="download-icon" aria-hidden="true">↓</span>
+        </button>
+      </div>
+      <p class="download-status" id="download-status" role="status" aria-live="polite">Your license is ready to save as a high-resolution PNG.</p>
+    </section>
+
+    <section class="empty-state" id="empty-state" hidden>
+      <div class="empty-mark" aria-hidden="true">?</div>
+      <h2>No license data found</h2>
+      <p>Start with the application form and your license will appear here.</p>
+      <a class="download-button empty-button" href="./index.html">Back to the form <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="license-footer">
+    <span>BIKINI BOTTOM FRIENDS LICENSE</span>
+    <span>A little official. A lot of fun.</span>
+  </footer>
 </body>
-
-<script>
-    // Retrieve data from sessionStorage
-    document.addEventListener("DOMContentLoaded", function () {
-        let name = sessionStorage.getItem('name');
-        let lastName = sessionStorage.getItem('lastName');
-        let country = sessionStorage.getItem('country');
-        let city = sessionStorage.getItem('city');
-        let gender = sessionStorage.getItem('gender');
-        let birthday = sessionStorage.getItem('birthday');
-        let profile = sessionStorage.getItem('profile');
-
-        // Display the data
-        document.getElementById('username').textContent += name;
-        document.getElementById('userlastname').textContent += lastName;
-        document.getElementById('usercountry').textContent += country;
-        document.getElementById('usercity').textContent += city;
-        document.getElementById('usergender').textContent += gender;
-        document.getElementById('userbirth').textContent += birthday;
-        
-        if (profile) {
-            document.getElementById('profile').src = profile; // if profile is an image URL
-        }
-
-    });
-</script>
-
-<link rel="stylesheet" href="./static/liecense.css">
 </html>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-                // Use html2canvas to capture the specific element
-                html2canvas(document.getElementById('card')).then(canvas => {
-                    // Create an anchor element to trigger the download
-                    let link = document.createElement('a');
-                    link.href = canvas.toDataURL('image/png');
-                    link.download = 'Friends License.png'; // File name for the download
-                    link.click(); // Trigger the download
-                }).catch(error => {
-                    console.error('Error capturing screenshot:', error);
-                });
-            });
-</script>

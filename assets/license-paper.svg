@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="456" viewBox="0 0 720 456">
+  <rect width="720" height="456" fill="#f5f1e7"/>
+  <defs>
+    <pattern id="paper" width="250" height="168" patternUnits="userSpaceOnUse">
+      <g fill="#aaa18f" opacity=".043" font-family="Georgia,serif" font-weight="700" letter-spacing="2">
+        <text x="-37" y="85" transform="rotate(-90 35 85)" font-size="19">BIKINI BOTTOM</text>
+        <text x="212" y="85" transform="rotate(-90 280 85)" font-size="19">BIKINI BOTTOM</text>
+      </g>
+      <g fill="none" stroke="#b9b09f" stroke-width="1.7" opacity=".045">
+        <path d="M82 31q19-17 38 0t38 0"/>
+        <path d="M162 130q15-14 30 0t30 0"/>
+        <circle cx="202" cy="40" r="10"/><circle cx="202" cy="40" r="4"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="720" height="456" fill="url(#paper)"/>
+  <g fill="#a99f8d" opacity=".035" font-family="Georgia,serif" font-size="23" font-weight="700" letter-spacing="3">
+    <text x="9" y="260" transform="rotate(-90 9 260)">B.B. FRIENDS LICENSE</text>
+    <text x="711" y="220" transform="rotate(90 711 220)">B.B. FRIENDS LICENSE</text>
+  </g>
+</svg>

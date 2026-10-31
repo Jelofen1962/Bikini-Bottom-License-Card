@@ -1,67 +1,135 @@
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jelo License Shop</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d8f4ef">
+  <meta name="description" content="Create your own Bikini Bottom Friends License.">
+  <title>Create your Bikini Bottom Friends License</title>
+  <link rel="preload" href="./assets/bg.png" as="image">
+  <link rel="stylesheet" href="./static/index.css">
+  <script src="./static/js/form.js" defer></script>
 </head>
-<body>
+<body class="builder-page">
+  <div class="page-backdrop" aria-hidden="true"></div>
 
-    <div class="form">
-        <label for="name">Name : </label>
-        <input id="name" type="text" placeholder="Name" id="name"><br>
-        <label for="lastName">Last Name : </label>
-        <input id="lastName" type="text" placeholder="Last Name" id="lastName"><br>
-        <label for="country">Country : </label>
-        <input id="country" type="text" placeholder="Country" id="country"><br>
-        <label for="city">City : </label>
-        <input id="city" type="text" placeholder="City" id="city"><br>
-        <label for="gender">Gender : </label>
-        <input id="gender" type="text" placeholder="M (male) or F (female)" id="gender"><br>
-        <label for="Birthday">Birthdate : </label>
-        <input id="Birthday" type="date" id="eyeColor"><br>
-        <p id="chooseimg">Choose your image (1:1 or 3:4)</p>
-        <input class="forminput" type="file" id="image" accept="image/png, image/jpeg, image/jpg">
-    </div>
-    <div class="button-container">
-        <button onclick="submit()" class="SuB">Submit</button>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="Bikini Bottom Friends License home">
+      <img src="./assets/bbs.png" alt="Saving Bikini Bottom">
+      <span>FRIENDS LICENSE</span>
+    </a>
+    <span class="header-note"><span class="status-dot" aria-hidden="true"></span> Your official bestie credentials</span>
+  </header>
 
+  <main class="builder-layout">
+    <section class="intro-panel" aria-labelledby="page-title">
+      <p class="eyebrow">BIKINI BOTTOM · RESIDENT SERVICES</p>
+      <h1 id="page-title">Some friendships deserve <span>official paperwork.</span></h1>
+      <p class="intro-copy">Add your details, pick a photo, and get your very own Friends License. No boating exam required.</p>
 
+      <div class="intro-details" aria-label="License details">
+        <div class="detail-item">
+          <span class="detail-number">01</span>
+          <span><strong>Make it yours</strong><small>Your name, your hometown, your photo.</small></span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-number">02</span>
+          <span><strong>Get your license</strong><small>Preview it, then save a crisp PNG.</small></span>
+        </div>
+      </div>
+      <p class="tiny-note">A fan-made project. Have fun down there.</p>
+    </section>
+
+    <section class="form-card" aria-labelledby="form-title">
+      <div class="form-card-heading">
+        <div>
+          <p class="eyebrow">APPLICATION FORM</p>
+          <h2 id="form-title">Create your license</h2>
+        </div>
+        <span class="form-index" aria-hidden="true">BB / 01</span>
+      </div>
+      <p class="form-intro">A few details and you're part of the neighborhood.</p>
+
+      <form id="license-form" novalidate>
+        <div class="field-grid">
+          <div class="field">
+            <label for="first-name">First name <span aria-hidden="true">*</span></label>
+            <input id="first-name" name="firstName" type="text" placeholder="Sponge" autocomplete="given-name" maxlength="32" required>
+          </div>
+          <div class="field">
+            <label for="last-name">Last name <span aria-hidden="true">*</span></label>
+            <input id="last-name" name="lastName" type="text" placeholder="SquarePants" autocomplete="family-name" maxlength="32" required>
+          </div>
+          <div class="field">
+            <label for="country">Country <span aria-hidden="true">*</span></label>
+            <input id="country" name="country" type="text" placeholder="Undersea" autocomplete="country-name" maxlength="40" required>
+          </div>
+          <div class="field">
+            <label for="city">City <span aria-hidden="true">*</span></label>
+            <input id="city" name="city" type="text" placeholder="Bikini Bottom" autocomplete="address-level2" maxlength="40" required>
+          </div>
+          <div class="field">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="" selected>Select an option</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="birthdate">Birthdate</label>
+            <input id="birthdate" name="birthdate" type="date" autocomplete="bday">
+          </div>
+          <div class="field">
+            <label for="hair-color">Hair color</label>
+            <input id="hair-color" name="hairColor" type="text" placeholder="Yellow" maxlength="20" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="eye-color">Eye color</label>
+            <input id="eye-color" name="eyeColor" type="text" placeholder="Blue" maxlength="20" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="height">Height (HT)</label>
+            <input id="height" name="height" type="text" placeholder="5-04 or 164 cm" maxlength="16" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="weight">Weight (WT)</label>
+            <input id="weight" name="weight" type="text" placeholder="120 lb or 54 kg" maxlength="16" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="photo-field">
+          <div class="photo-copy">
+            <label for="profile-image">Profile photo</label>
+            <p>JPG, PNG or WebP · up to 5 MB</p>
+          </div>
+          <div class="photo-control">
+            <div class="photo-preview" id="photo-preview" aria-hidden="true">
+              <img id="photo-preview-image" alt="">
+              <span id="photo-placeholder">+</span>
+            </div>
+            <label class="file-picker" for="profile-image">
+              <span id="file-picker-label">Choose image</span>
+              <input id="profile-image" name="profileImage" type="file" accept="image/png,image/jpeg,image/webp">
+            </label>
+          </div>
+        </div>
+
+        <p class="form-message" id="form-message" role="alert" aria-live="polite"></p>
+        <button class="primary-button" id="create-license" type="submit">
+          <span>Create my license</span>
+          <span class="button-arrow" aria-hidden="true">↗</span>
+        </button>
+        <p class="privacy-note">Your details stay in this browser tab and are used only to create your card.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>BIKINI BOTTOM FRIENDS LICENSE</span>
+    <span>Made for the good people of the sea.</span>
+  </footer>
 </body>
-<script>
-    function submit() {
-    // Get values from input fields
-    let name = document.getElementById('name').value.toUpperCase();
-    let lastName = document.getElementById('lastName').value.toUpperCase();
-    let country = document.getElementById('country').value.toUpperCase();
-    let city = document.getElementById('city').value.toUpperCase();
-    let gender = document.getElementById('gender').value.toUpperCase();
-    let birthday = document.getElementById('Birthday').value.toUpperCase();
-    let profile = document.getElementById('image');
-
-    // Store data in sessionStorage
-    sessionStorage.setItem('name', name);
-    sessionStorage.setItem('lastName', lastName);
-    sessionStorage.setItem('country', country);
-    sessionStorage.setItem('city', city);
-    sessionStorage.setItem('gender', gender);
-    sessionStorage.setItem('birthday', birthday);
-    sessionStorage.setItem('profile', profile);
-
-    if(profile.files && profile.files[0]){
-        let reader = new FileReader();
-        reader.onload = function(e){
-            sessionStorage.setItem('profile', e.target.result);
-            window.location.href = "license.html";
-        };
-        reader.readAsDataURL(profile.files[0]);
-    }
-    else{
-        window.location.href = "license.html";
-    }
-    }
-    // Redirect to license.html after 3 seconds
-    
-</script>
-<link rel="stylesheet" href="./static/index.css">
 </html>
